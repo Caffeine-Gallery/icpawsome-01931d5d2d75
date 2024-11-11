@@ -1,0 +1,47 @@
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.balance-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.loader-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader-container.active {
+    display: flex;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input.form-control {
+    margin-bottom: 15px;
+}
