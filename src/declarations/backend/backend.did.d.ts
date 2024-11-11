@@ -4,6 +4,7 @@ import type { IDL } from '@dfinity/candid';
 
 export interface _SERVICE {
   'balanceOf' : ActorMethod<[Principal], bigint>,
+  'getCanisterId' : ActorMethod<[], Principal>,
   'getName' : ActorMethod<[], string>,
   'getSymbol' : ActorMethod<[], string>,
   'mint' : ActorMethod<[], undefined>,

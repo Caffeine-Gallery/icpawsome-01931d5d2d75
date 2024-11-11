@@ -79,6 +79,10 @@ actor Token {
         return name;
     };
 
+    public query func getCanisterId() : async Principal {
+        Principal.fromActor(Token);
+    };
+
     system func preupgrade() {
         balanceEntries := Iter.toArray(balances.entries());
     };

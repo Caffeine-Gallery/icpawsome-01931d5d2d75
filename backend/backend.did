@@ -1,5 +1,6 @@
 service : {
   balanceOf: (principal) -> (nat) query;
+  getCanisterId: () -> (principal) query;
   getName: () -> (text) query;
   getSymbol: () -> (text) query;
   mint: () -> ();

@@ -16,15 +16,17 @@ async function init() {
 async function handleAuthenticated() {
     document.getElementById('loader').classList.add('active');
     try {
-        const [name, symbol, balance] = await Promise.all([
+        const [name, symbol, balance, canisterId] = await Promise.all([
             backend.getName(),
             backend.getSymbol(),
-            backend.balanceOf(principal)
+            backend.balanceOf(principal),
+            backend.getCanisterId()
         ]);
 
         document.getElementById('tokenInfo').innerHTML = `
             <p>Token Name: ${name}</p>
             <p>Symbol: ${symbol}</p>
+            <p>Canister ID: ${canisterId.toString()}</p>
         `;
         document.getElementById('balance').textContent = `${balance} ${symbol}`;
     } catch (error) {
